@@ -14,7 +14,7 @@ root = tree.getroot()
 # All cols for one hot.
 import pandas as pd
 import numpy as np
-
+NUMBER_OF_SERVICEGROUPS=9
 all_cols = []
 all_cols_indicies = {}
 all_indexes = []
@@ -70,7 +70,7 @@ for host in root.findall(".//host"):
 res = pd.DataFrame.from_dict(all_rows, orient='index', columns=all_cols)
 res.to_csv("./output/onehot.csv")
 
-kmeans = KMeans(6)
+kmeans = KMeans(NUMBER_OF_SERVICEGROUPS)
 clusters = kmeans.fit_predict(res)
 labels = pd.DataFrame(clusters)
 for index, row in labels.iterrows():
