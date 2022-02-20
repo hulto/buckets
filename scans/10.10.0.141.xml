@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sat Feb 19 14:38:45 2022 as: nmap -sV -sC -p22,443,53,111,3306,21,23,445,25,5432,445,587,465 -T5 -oX ./Documents/buckets/scans/10.10.0.141 10.10.0.141 -->
+<nmaprun scanner="nmap" args="nmap -sV -sC -p22,443,53,111,3306,21,23,445,25,5432,445,587,465 -T5 -oX ./Documents/buckets/scans/10.10.0.141 10.10.0.141" start="1645299525" startstr="Sat Feb 19 14:38:45 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="12" services="21-23,25,53,111,443,445,465,587,3306,5432"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.0.141" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1645299526" endtime="1645299558"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.10.0.141" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="7.6p1 Ubuntu 4ubuntu0.5" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 1d:dd:63:cb:0c:d3:35:94:76:a8:78:9a:d5:83:08:fc (RSA)&#xa;  256 8c:97:ab:cd:f9:1f:31:49:38:0d:81:43:44:df:22:8d (ECDSA)&#xa;  256 55:f9:11:55:54:80:9d:7e:43:49:97:1c:87:7d:73:2f (ED25519)"><table>
+<elem key="bits">2048</elem>
+<elem key="fingerprint">1ddd63cb0cd3359476a8789ad58308fc</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQC/cwBV+mYgbAYz1jQ8CRDRRzTYZl6cnNFLcby5En6W75mYdC0gV9jh0IaEm8gsOS/lOdSSCm3ADC9DIdv7+MpRkei3Cd2JFNvOkm4s6I0nKJQ6NVb7Et8uiRkIIH2zssRfKC+bhxLdMhIfaSgTJN1M3TLrIJtL+IA3/r4EeVzkGb8d2PNnaGuRrNkXunXkDCds1o+s+6uU//JkML0ljqWOwP/4urfH9yT0eRrXZBBh8W+Y/EXf+SnuWID4didERfSdvh03RgE8GmIkwWwIoC3jq9j1buyyRS/7v2j51YPHJAElpYjygA/Ff4WTysOswqQnBH9nW9t+8ie4mtn0E+Ox</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="fingerprint">8c97abcdf91f3149380d814344df228d</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAu14PsiIf0MISM3S0YE/0/aRpF5Klc1gLIdnn5tBr5X7rhkyeYufJj55vFlnFti7SSBgd0VFBmL9tkgOWKhhqQ=</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="fingerprint">55f9115554809d7e4349971c877d732f</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIACTvgmybE/j7sYbW7jI6My/KDKDrvj4CRYjHY0LON+7</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="23"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="telnet" method="table" conf="3"/></port>
+<port protocol="tcp" portid="25"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="smtp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="ISC BIND" version="9.11.3-1ubuntu1.16" extrainfo="Ubuntu Linux" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:isc:bind:9.11.3-1ubuntu1.16</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: 9.11.3-1ubuntu1.16-Ubuntu"><elem key="bind.version">9.11.3-1ubuntu1.16-Ubuntu</elem>
+</script></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version    port/proto  service&#xa;  100000  2,3,4        111/tcp   rpcbind&#xa;  100000  2,3,4        111/udp   rpcbind&#xa;  100000  3,4          111/tcp6  rpcbind&#xa;  100000  3,4          111/udp6  rpcbind&#xa;  100003  3           2049/udp   nfs&#xa;  100003  3           2049/udp6  nfs&#xa;  100003  3,4         2049/tcp   nfs&#xa;  100003  3,4         2049/tcp6  nfs&#xa;  100005  1,2,3      34245/tcp   mountd&#xa;  100005  1,2,3      39604/udp   mountd&#xa;  100005  1,2,3      42705/tcp6  mountd&#xa;  100005  1,2,3      51252/udp6  mountd&#xa;  100021  1,3,4      34093/udp6  nlockmgr&#xa;  100021  1,3,4      37365/tcp6  nlockmgr&#xa;  100021  1,3,4      44175/tcp   nlockmgr&#xa;  100021  1,3,4      55191/udp   nlockmgr&#xa;  100227  3           2049/tcp   nfs_acl&#xa;  100227  3           2049/tcp6  nfs_acl&#xa;  100227  3           2049/udp   nfs_acl&#xa;  100227  3           2049/udp6  nfs_acl&#xa;"><table key="100005">
+<table key="tcp6">
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="port">42705</elem>
+</table>
+<table key="udp6">
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="port">51252</elem>
+</table>
+<table key="tcp">
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="port">34245</elem>
+</table>
+<table key="udp">
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="port">39604</elem>
+</table>
+</table>
+<table key="100227">
+<table key="udp6">
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+</table>
+<elem key="port">2049</elem>
+</table>
+<table key="tcp6">
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+</table>
+<elem key="port">2049</elem>
+</table>
+<table key="udp">
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+</table>
+<elem key="port">2049</elem>
+</table>
+<table key="tcp">
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+</table>
+<elem key="port">2049</elem>
+</table>
+</table>
+<table key="100003">
+<table key="udp6">
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+</table>
+<elem key="port">2049</elem>
+</table>
+<table key="tcp6">
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">2049</elem>
+</table>
+<table key="udp">
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+</table>
+<elem key="port">2049</elem>
+</table>
+<table key="tcp">
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">2049</elem>
+</table>
+</table>
+<table key="100021">
+<table key="tcp6">
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">37365</elem>
+</table>
+<table key="udp6">
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">34093</elem>
+</table>
+<table key="tcp">
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">44175</elem>
+</table>
+<table key="udp">
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">55191</elem>
+</table>
+</table>
+<table key="100000">
+<table key="local">
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">/run/rpcbind.sock</elem>
+</table>
+<table key="udp">
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+<table key="udp6">
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+<table key="tcp6">
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+<table key="tcp">
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx</cpe></service><script id="http-robots.txt" output="56 disallowed entries (15 shown)&#xa;/ /autocomplete/users /autocomplete/projects /search &#xa;/admin /profile /dashboard /users /help /s/ /-/profile /-/ide/ &#xa;/-/experiment /*/new /*/edit"/><script id="http-title" output="Sign in \xC2\xB7 GitLab&#xa;Requested resource was https://10.10.0.141/users/sign_in"><elem key="title">Sign in \xC2\xB7 GitLab</elem>
+<elem key="redirect_url">https://10.10.0.141/users/sign_in</elem>
+</script><script id="ssl-cert" output="Subject: commonName=gitlab.cybertron.local/organizationName=autobots/stateOrProvinceName=VA/countryName=US&#xa;Not valid before: 2020-12-03T01:57:49&#xa;Not valid after:  2120-11-09T01:57:49"><table key="subject">
+<elem key="commonName">gitlab.cybertron.local</elem>
+<elem key="countryName">US</elem>
+<elem key="emailAddress">admin@cybertron.local</elem>
+<elem key="localityName">Tysons</elem>
+<elem key="organizationName">autobots</elem>
+<elem key="organizationalUnitName">main</elem>
+<elem key="stateOrProvinceName">VA</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">gitlab.cybertron.local</elem>
+<elem key="countryName">US</elem>
+<elem key="emailAddress">admin@cybertron.local</elem>
+<elem key="localityName">Tysons</elem>
+<elem key="organizationName">autobots</elem>
+<elem key="organizationalUnitName">main</elem>
+<elem key="stateOrProvinceName">VA</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">C1ABB5748F20A2C6482859C79C5A8F7931851B874BF9FB1B85569A8AAEFD1E2C2770926723831DDBE767C4CE1B6A37CA3E039079AAB5DB5AA2B05145C57B9464E4A2FD7FEE6712EFF8A0AAE30093F1551BF4B58194226A28A5F96C24058B79C6EFDDA75EE7844FE703474DC95D6AEDC487150B07D9A413B810A7ADF19C51EBEB8216E6639223FD09AC32176570248D80A393C669B1BDB64A35B348BB5FB37C7A406D036F549F34D7654C61732BC25810FA4AA7333FAADF20733FF2A444A68BF1E481C374A85FA1AACCAC844FC3204EF2B686C8D78086368AB4EF8D9168ADB05767541245DEFEB1006E9495E9576F31DFAEE8DA518A01D469FB4784D27035DFA1</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">87:64:86:75:85:D6:6F:B9:70:6A:B0:19:B4:C9:0A:A9:DD:42:FC:1F</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:87:64:86:75:85:D6:6F:B9:70:6A:B0:19:B4:C9:0A:A9:DD:42:FC:1F&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE</elem>
+<elem key="critical">true</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2020-12-03T01:57:49</elem>
+<elem key="notAfter">2120-11-09T01:57:49</elem>
+</table>
+<elem key="md5">86fba052dad209e2456e68698a844051</elem>
+<elem key="sha1">da92f2fc0c2c8dbfa7ad940793fa5190ab37f0e3</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIEDTCCAvWgAwIBAgIUCPsYhHntoloc6Jf0MRaNDnJcFO8wDQYJKoZIhvcNAQEL&#xa;BQAwgZQxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJWQTEPMA0GA1UEBwwGVHlzb25z&#xa;MREwDwYDVQQKDAhhdXRvYm90czENMAsGA1UECwwEbWFpbjEfMB0GA1UEAwwWZ2l0&#xa;bGFiLmN5YmVydHJvbi5sb2NhbDEkMCIGCSqGSIb3DQEJARYVYWRtaW5AY3liZXJ0&#xa;cm9uLmxvY2FsMCAXDTIwMTIwMzAxNTc0OVoYDzIxMjAxMTA5MDE1NzQ5WjCBlDEL&#xa;MAkGA1UEBhMCVVMxCzAJBgNVBAgMAlZBMQ8wDQYDVQQHDAZUeXNvbnMxETAPBgNV&#xa;BAoMCGF1dG9ib3RzMQ0wCwYDVQQLDARtYWluMR8wHQYDVQQDDBZnaXRsYWIuY3li&#xa;ZXJ0cm9uLmxvY2FsMSQwIgYJKoZIhvcNAQkBFhVhZG1pbkBjeWJlcnRyb24ubG9j&#xa;YWwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDBq7V0jyCixkgoWcec&#xa;Wo95MYUbh0v5+xuFVpqKrv0eLCdwkmcjgx3b52fEzhtqN8o+A5B5qrXbWqKwUUXF&#xa;e5Rk5KL9f+5nEu/4oKrjAJPxVRv0tYGUImoopflsJAWLecbv3ade54RP5wNHTcld&#xa;au3EhxULB9mkE7gQp63xnFHr64IW5mOSI/0JrDIXZXAkjYCjk8Zpsb22SjWzSLtf&#xa;s3x6QG0Db1SfNNdlTGFzK8JYEPpKpzM/qt8gcz/ypESmi/HkgcN0qF+hqsyshE/D&#xa;IE7ytobI14CGNoq0742RaK2wV2dUEkXe/rEAbpSV6VdvMd+u6NpRigHUaftHhNJw&#xa;Nd+hAgMBAAGjUzBRMB0GA1UdDgQWBBSHZIZ1hdZvuXBqsBm0yQqp3UL8HzAfBgNV&#xa;HSMEGDAWgBSHZIZ1hdZvuXBqsBm0yQqp3UL8HzAPBgNVHRMBAf8EBTADAQH/MA0G&#xa;CSqGSIb3DQEBCwUAA4IBAQB2Rs+3pSyd9nP+QqNsEyepEuXiIo3WimuRqAgUrTHi&#xa;RLVpTbZWMZ34Wx7CS3Qpb/EmRhuHoIZg5/8etvqtsLUxCpwXOIWaEpkxcVZQkIzg&#xa;GV+nJAiwTopTgGnr2asnBgWaNFzzhGoaV67cxaMf2sE27ulf+hVaZrE7rJmncjci&#xa;geEHvWRNwC6+HfEHMUzut+KwqY+SSlg8J4YSwpP9lo5SQxZuc6uwrnbgnL1t08Nl&#xa;dLhjOW4nHrNieHWRqnaMGgJX39UBMEBqqxzCfBi6uDOsnF8j5HtrsPYCNnvp/bWr&#xa;/mFSupnZhLsoalVJEcgdPF5yNyGAWys3KCFX9tkzyZnx&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="http-trane-info" output="Problem with XML parsing of /evox/about"/><script id="ssl-date" output="TLS randomness does not represent time"></script></port>
+<port protocol="tcp" portid="445"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="465"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="smtps" method="table" conf="3"/></port>
+<port protocol="tcp" portid="587"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="submission" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="mysql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5432"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="postgresql" method="table" conf="3"/></port>
+</ports>
+<times srtt="284271" rttvar="432818" to="300000"/>
+</host>
+<runstats><finished time="1645299558" timestr="Sat Feb 19 14:39:18 2022" summary="Nmap done at Sat Feb 19 14:39:18 2022; 1 IP address (1 host up) scanned in 33.42 seconds" elapsed="33.42" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
